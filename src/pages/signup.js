@@ -4,16 +4,18 @@ import uit_logo from '../assets/uit-logo.png';
 import usa_logo from '../assets/usa.png';
 import * as React from 'react';
 import { userSignup } from '../api';
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
   const [formState, setFormState] = React.useState({
-    citizenId: '',
+    citizenId: 'a',
     email: '',
     address: '',
     username: '',
     password: '',
   });
   const [loading, setLoading] = React.useState(false);
+  const nav = useNavigate();
 
   const handleChange = (event) => {
     event.persist();
@@ -31,7 +33,7 @@ const Signup = () => {
     if (
       formState.username == '' ||
       formState.password == '' ||
-      formState.citizenId == '' ||
+      // formState.citizenId == '' ||
       formState.address == '' ||
       formState.email == ''
     ) {
@@ -48,6 +50,7 @@ const Signup = () => {
       const res = await userSignup(formState);
       alert(res.data);
       setLoading(false);
+      nav('/');
     }
   };
 
@@ -59,7 +62,7 @@ const Signup = () => {
             <h1 className='text-8xl font-bold mb-2'>Hi there!</h1>
             <h2 className='text-2xl'>Welcome to EVB</h2>
           </div>
-          <TextField
+          {/* <TextField
             name='citizenId'
             id='outlined-basic'
             label='Citizen ID'
@@ -67,7 +70,7 @@ const Signup = () => {
             className='w-[25vw]'
             margin='normal'
             onChange={handleChange}
-          />
+          /> */}
           <TextField
             name='email'
             id='outlined-basic'
@@ -80,7 +83,7 @@ const Signup = () => {
           <TextField
             name='address'
             id='outlined-basic'
-            label='Address'
+            label='Metamask address'
             variant='outlined'
             className='w-[25vw]'
             margin='normal'
@@ -134,7 +137,7 @@ const Signup = () => {
         <div className='flex w-1/2 h-full justify-center items-center bg-blue-200'>
           <div className='w-full flex flex-row justify-center items-center'>
             <img src={uit_logo} className='w-auto h-[25vh]' />
-            <img src={usa_logo} className='w-auto h-[25vh]' />
+            {/* <img src={usa_logo} className='w-auto h-[25vh]' /> */}
           </div>
         </div>
       </div>

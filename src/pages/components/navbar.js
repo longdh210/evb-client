@@ -93,7 +93,7 @@ function DrawerAppBar(props) {
                 sx={{ color: '#fff' }}
                 onClick={() => {
                   console.log('run');
-                  nav(`/${item.toLowerCase()}`, { replace: true });
+                  nav(`/${item.toLowerCase()}`);
                   // return redirect(`${item.toLowerCase()}`);
                 }}
               >

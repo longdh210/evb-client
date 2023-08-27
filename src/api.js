@@ -65,3 +65,27 @@ export async function vote(voteInfo, signedData) {
   });
   return response;
 }
+
+export async function createCompany(companyInfo) {
+  console.log('run signup api');
+  const response = await request.request({
+    method: 'POST',
+    url: 'create-company-info/create',
+    data: {
+      represent: companyInfo.represent,
+      companyName: companyInfo.companyName,
+      companyInfo: companyInfo.companyInfo,
+      businessInfo: companyInfo.businessInfo,
+      companyLogo: companyInfo.companyLogo,
+    },
+  });
+  return response;
+}
+
+export async function getListCompanies() {
+  const response = await request.request({
+    method: 'GET',
+    url: '/list-companies',
+  });
+  return response;
+}

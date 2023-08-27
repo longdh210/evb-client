@@ -5,3 +5,9 @@ export const USER_OPERATION_ADDRESS =
   '0x642D08E5A20d5A09D6A3395cF999b6b710a3DdF6';
 export const SMART_ACCOUNT_FACTORY_ADDRESS =
   '0x727d02cec46057c1B11Ab0599f57a6599Ce97448';
+export const governanceTokenAddress =
+  '0xe8D2A1E88c91DCd5433208d4152Cc4F399a7e91d';
+export const timeLockAddress = '0x18E317A7D70d8fBf8e6E893616b52390EbBdb629';
+export const governorContractAddress =
+  '0x4b6aB5F819A515382B0dEB6935D793817bB4af28';
+export const investAddress = '0xB82008565FdC7e44609fA118A4a681E92581e680';

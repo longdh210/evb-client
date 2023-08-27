@@ -9,6 +9,8 @@ import Signup from './pages/signup';
 import ListElection from './pages/list-election';
 import ListParty from './pages/list-party';
 import ListProposal from './pages/list-proposal';
+import CreateStartupInfo from './pages/create-startup-info';
+import ListCompanies from './pages/list-company';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Login />}></Route>
         <Route path='voting' element={<Voting />}></Route>
+        <Route path='create' element={<CreateStartupInfo />}></Route>
+        <Route path='list' element={<ListCompanies />}></Route>
         <Route path='signup' element={<Signup />}></Route>
         <Route path='list-election' element={<ListElection />}></Route>
         <Route path='list-party/*' element={<ListParty />}></Route>
